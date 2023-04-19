@@ -4,23 +4,23 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class Part1PlaceOrderScooter {
-    private WebDriver driver;
+    private final WebDriver driver;
     //Поле ввода имени
-    private By nameInput = By.xpath(".//input[@placeholder='* Имя']");
+    private final By nameInput = By.xpath(".//input[@placeholder='* Имя']");
     //Поле ввода фамилии
-    private By surnameInput = By.xpath(".//input[@placeholder='* Фамилия']");
+    private final By surnameInput = By.xpath(".//input[@placeholder='* Фамилия']");
     //Поле ввода адреса доставки
-    private By adressInput = By.xpath(".//input[@placeholder='* Адрес: куда привезти заказ']");
+    private final By addressInput = By.xpath(".//input[@placeholder='* Адрес: куда привезти заказ']");
     //Поле ввода контактного телефона
-    private By cellPhoneInput = By.xpath(".//input[@placeholder='* Телефон: на него позвонит курьер']");
+    private final By cellPhoneInput = By.xpath(".//input[@placeholder='* Телефон: на него позвонит курьер']");
     //Поле поиска по выпадающему списку станций метро
-    private By metroStationInput = By.className("select-search__input");
+    private final By metroStationInput = By.className("select-search__input");
     //Кнопка Далее в первой секции формы заказа
-    private By nextButton = By.xpath(".//div[@class='Order_NextButton__1_rCA']//button");
+    private final By nextButton = By.xpath(".//div[@class='Order_NextButton__1_rCA']//button");
     //Выпадающий список станций метро
-    private By stationsDropDownList = By.xpath(".//*[@class='select-search__select']");
+    private final By stationsDropDownList = By.xpath(".//*[@class='select-search__select']");
 
-    public Part1PlaceOrderScooter(WebDriver driver ) {
+    public Part1PlaceOrderScooter(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -35,21 +35,22 @@ public class Part1PlaceOrderScooter {
     }
 
     public void setUserAddress(String address) {
-        driver.findElement(adressInput).clear();
-        driver.findElement(adressInput).sendKeys(address);
+        driver.findElement(addressInput).clear();
+        driver.findElement(addressInput).sendKeys(address);
     }
 
-    public void setUserMetroStation(String metroStation){
+    public void setUserMetroStation(String metroStation) {
         driver.findElement(metroStationInput).click();
         driver.findElement(metroStationInput).sendKeys(metroStation);
         driver.findElement(stationsDropDownList).click();
     }
 
-    public void setUserPhoneNumber(String phoneNumber){
+    public void setUserPhoneNumber(String phoneNumber) {
         driver.findElement(cellPhoneInput).clear();
         driver.findElement(cellPhoneInput).sendKeys(phoneNumber);
     }
-    public void fillInClientData(String name, String surname, String address, String phoneNumber, String metroStation){
+
+    public void fillInClientData(String name, String surname, String address, String phoneNumber, String metroStation) {
         setUserName(name);
         setUserSurname(surname);
         setUserAddress(address);
@@ -57,7 +58,7 @@ public class Part1PlaceOrderScooter {
         setUserPhoneNumber(phoneNumber);
     }
 
-    public void clickNextButton(){
+    public void clickNextButton() {
         driver.findElement(nextButton).click();
     }
 }
