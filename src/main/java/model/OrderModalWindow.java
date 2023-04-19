@@ -1,4 +1,4 @@
-package ru.praktikum.model;
+package model;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
