@@ -6,10 +6,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import ru.praktikum.model.HomePageScooter;
-import ru.praktikum.model.OrderModalWindow;
-import ru.praktikum.model.Part1PlaceOrderScooter;
-import ru.praktikum.model.Part2PlaceOrderScooter;
+import model.HomePageScooter;
+import model.OrderModalWindow;
+import model.Part1PlaceOrderScooter;
+import model.Part2PlaceOrderScooter;
 
 import java.util.ArrayList;
 import java.util.Arrays;

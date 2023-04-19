@@ -8,7 +8,7 @@ import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
-import ru.praktikum.model.FAQSectionPageScooter;
+import model.FAQSectionPageScooter;
 
 @RunWith(Parameterized.class)
 public class FAQSectionChromeTest {
